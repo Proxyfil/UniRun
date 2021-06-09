@@ -30,7 +30,9 @@ let isAlive = setInterval(function (){
 
     let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
 
-    if (cactusLeft <42 && cactusLeft >0 && dinoTop >= 140)
+    let cactusTop = parseInt(window.getComputedStyle(cactus).getPropertyValue("top"));
+
+    if (cactusLeft <42 && cactusLeft >0 && dinoTop >= cactusTop)
     {
         cactus.classList.remove("cactusmove"); 
         text.innerHTML = ("You died... [Space]");
@@ -46,7 +48,7 @@ let isAlive = setInterval(function (){
         score.innerHTML = parseInt(newscore)
     }
 
-    if (cactusLeft <-10 && dinoTop < 140){
+    if (cactusLeft <-10 && dinoTop < cactusTop){
         
     if (cactus.classList == "cactusmove"){
 
