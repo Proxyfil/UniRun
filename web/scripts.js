@@ -90,7 +90,7 @@ document.addEventListener("keydown", function (event){
 });
 
 document.addEventListener("click", function (event){
-    if (skin.value == "thais" && cactus.classList != "cactusmove"){
+    if (skin.value == "merci" && cactus.classList != "cactusmove"){
         dino.style.backgroundImage = "url(assets/character_skin.gif)";
     }
     jump();
