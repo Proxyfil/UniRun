@@ -80,7 +80,13 @@ let isAlive = setInterval(function (){
 
 
 document.addEventListener("keydown", function (event){
-    jump();
+    console.log(event.key)
+    if (event.key == ' '){
+        jump();
+    }
+    else if (event.key == 'Control'){
+        dino.style.backgroundImage = "url(assets/character_skin.gif)";
+    }
 });
 
 function getRandomArbitrary(min, max) {
