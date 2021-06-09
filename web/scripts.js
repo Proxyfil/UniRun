@@ -5,7 +5,7 @@ const score = document.getElementById("score");
 const bestscore = document.getElementById("bestscore");
 const skin = document.getElementById("skin");
 newscore = 0
-highscore = 1
+highscore = 0
 
 
 
