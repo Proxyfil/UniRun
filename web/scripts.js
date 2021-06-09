@@ -3,6 +3,7 @@ const cactus = document.getElementById("cactus");
 const text = document.getElementById("text");
 const score = document.getElementById("score");
 const bestscore = document.getElementById("bestscore");
+const skin = document.getElementById("skin");
 newscore = 0
 highscore = 0
 
@@ -57,19 +58,19 @@ let isAlive = setInterval(function (){
             cactus.style.backgroundImage = "url('assets/trash.png')";
             cactus.style.width = "32px";
             cactus.style.height = "32px";
-            cactus.style.top = "136px";
+            cactus.style.top = "-23px";
         }
         if (obs == 1){
             cactus.style.backgroundImage = "url('assets/car.png')";
             cactus.style.width = "64px";
             cactus.style.height = "32px";
-            cactus.style.top = "136px";
+            cactus.style.top = "-23px";
         }
         if (obs == 2){
             cactus.style.backgroundImage = "url('assets/man.png')";
             cactus.style.width = "32px";
             cactus.style.height = "48px";
-            cactus.style.top = "120px";
+            cactus.style.top = "-39px";
         }
     }
     }
@@ -80,14 +81,21 @@ let isAlive = setInterval(function (){
 
 
 document.addEventListener("keydown", function (event){
-    console.log(event.key)
-    if (event.key == ' '){
+    if (event.key == ' ' || event.key == 'touchstart' ){
         jump();
     }
     else if (event.key == 'Control'){
         dino.style.backgroundImage = "url(assets/character_skin.gif)";
     }
 });
+
+document.addEventListener("click", function (event){
+    if (skin.value == "thais" && cactus.classList != "cactusmove"){
+        dino.style.backgroundImage = "url(assets/character_skin.gif)";
+    }
+    jump();
+});
+
 
 function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
