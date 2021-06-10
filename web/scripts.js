@@ -1,7 +1,7 @@
 const dino = document.getElementById("dino");
 const cactus = document.getElementById("cactus");
 const text = document.getElementById("text");
-const score = document.getElementById("score");
+const score = document.getElementById("score")
 const bestscore = document.getElementById("bestscore");
 const skin = document.getElementById("skin");
 newscore = 0;
