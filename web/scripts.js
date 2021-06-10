@@ -73,10 +73,10 @@ let isAlive = setInterval(function (){
                 cactus.style.height = "48px";
                 cactus.style.top = "-39px";
             }
-            if (cactus.classList != "cactusmovetier2" && newscore > 1500){
+            if (cactus.classList != "cactusmovetier2" && newscore > 1000){
                 speedup();
             }
-            if (cactus.classList != "cactusmovetier3" && newscore > 3000){
+            if (cactus.classList != "cactusmovetier3" && newscore > 2000){
                 speedup();
             }
         }
