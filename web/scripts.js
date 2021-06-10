@@ -17,7 +17,7 @@ function jump() {
         }, 400);
     }
 
-    if (cactus.classList != "cactusmovetier1" || cactus.classList != "cactusmovetier2" || cactus.classList != "cactusmovetier3"){
+    if (cactus.classList != "cactusmovetier1" && cactus.classList != "cactusmovetier2" && cactus.classList != "cactusmovetier3"){
         cactus.classList.add("cactusmovetier1");
         text.classList.add("hide");
         newscore = 0;
