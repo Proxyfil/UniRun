@@ -85,7 +85,7 @@ let isAlive = setInterval(function (){
 }, 10);
 
 function speedup(){
-    if (cactus.classList != "cactusmovetier2" && newscore > 1500){
+    if (cactus.classList != "cactusmovetier2" && newscore > 1000){
         cactus.classList.remove("cactusmovetier1");
         text.innerHTML = "Speed Tier 2 !";
         text.classList.remove("hide");
@@ -96,7 +96,7 @@ function speedup(){
         }, 1000);
     }
     
-    if (cactus.classList != "cactusmovetier3" && newscore > 3000){
+    if (cactus.classList != "cactusmovetier3" && newscore > 2000){
         cactus.classList.remove("cactusmovetier2");
         text.innerHTML = "Speed Tier 3 !";
         text.classList.remove("hide");
