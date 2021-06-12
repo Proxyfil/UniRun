@@ -8,7 +8,8 @@ body{
     height: 200px;
     border: 1px solid black;
     margin: auto;
-    background-color: #ffffff;
+    background-image: url(assets/background.gif);
+    background-size: 600px 200px;
 }
 
 #dino{
@@ -100,7 +101,7 @@ body{
 }
 
 .hide{
-    color: #ffffff;
+    z-index: -10;
 }
 
 @keyframes block {
