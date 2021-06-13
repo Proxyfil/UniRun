@@ -17,10 +17,10 @@ function jump() {
         }, 400);
     }
 
-    if (cactus.classList != "cactusmovetier1" && cactus.classList != "cactusmovetier2" && cactus.classList != "cactusmovetier3"){
+    if (cactus.classList != "cactusmovetier1" && cactus.classList != "cactusmovetier2" && cactus.classList != "cactusmovetier3" && cactus.classList != "cactusmovetier4"){
         cactus.classList.add("cactusmovetier1");
         text.classList.add("hide");
-        newscore = 0;
+        newscore = 2000;
     }
 }
 
@@ -104,14 +104,14 @@ let isAlive = setInterval(function (){
                 cactus.style.height = "32px";
                 cactus.style.top = "-69px";
             }
-            if (cactus.classList != "cactusmovetier2" && newscore > 1000){
-                speedup(newscore);
+            if (cactus.classList != "cactusmovetier2" && newscore > 1000 && newscore < 2000){
+                speedup("tier2");
             }
-            if (cactus.classList != "cactusmovetier3" && newscore > 2000){
-                speedup(newscore);
+            if (cactus.classList != "cactusmovetier3" && newscore > 2000 && newscore < 3000){
+                speedup("tier3");
             }
-            if (cactus.classList != "cactusmovetier3" && newscore > 3000){
-                speedup(newscore);
+            if (cactus.classList != "cactusmovetier3" && newscore > 3000 && newscore < 4000){
+                speedup("tier4");
             }
         }
     }
@@ -119,7 +119,7 @@ let isAlive = setInterval(function (){
 }, 10);
 
 function speedup(score){
-    if (score > 1000){
+    if (score == "tier2"){
         cactus.classList.remove("cactusmovetier1");
         text.innerHTML = "Speed Tier 2 !";
         text.classList.remove("hide");
@@ -130,7 +130,7 @@ function speedup(score){
         }, 1000);
     }
     
-    if (score > 2000){
+    if (score == "tier3"){
         cactus.classList.remove("cactusmovetier2");
         text.innerHTML = "Speed Tier 3 !";
         text.classList.remove("hide");
@@ -141,7 +141,7 @@ function speedup(score){
         }, 1000);
     }
 
-    if (score > 3000){
+    if (score == "tier4"){
         cactus.classList.remove("cactusmovetier3");
         text.innerHTML = "Speed Tier 4 !";
         text.classList.remove("hide");
