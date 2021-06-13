@@ -20,7 +20,7 @@ function jump() {
     if (cactus.classList != "cactusmovetier1" && cactus.classList != "cactusmovetier2" && cactus.classList != "cactusmovetier3" && cactus.classList != "cactusmovetier4"){
         cactus.classList.add("cactusmovetier1");
         text.classList.add("hide");
-        newscore = 2000;
+        newscore = 0;
     }
 }
 
