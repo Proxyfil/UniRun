@@ -62,7 +62,7 @@ body{
 
     background-image: url(assets/trash.png);
 
-    z-index: 0;
+    z-index: 10;
 }
 
 .cactusmovetier1 {
@@ -75,6 +75,10 @@ body{
 
 .cactusmovetier3{
     animation: block 0.6s infinite linear;
+}
+
+.cactusmovetier4{
+    animation: block 0.5s infinite linear;
 }
 
 #text{
